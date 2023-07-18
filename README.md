@@ -13,9 +13,12 @@ The CTTU website (https://cttu.recife.pe.gov.br/cameras-da-cttu) provides access
 
 ### Image retrieving
 
-In the initial phase, the Selenium package was used (cttu_image_collect.ipynb) to retrieve camera images. The images were stored on Google Drive. Due to the website's significant response time (approximately 8 seconds to load an image), there is no risk of generating a high number of requests. It is important to note that the image quality is not high (less than 100 KB), making it impossible to identify vehicle license plates or pedestrians, thereby preserving privacy.
+In the initial phase, the Selenium package was used to retrieve camera images. The images were stored on Google Drive. Due to the website's significant response time (approximately 8 seconds to load an image), there is no risk of generating a high number of requests. It is important to note that the image quality is not high (less than 100 KB), making it impossible to identify vehicle license plates or pedestrians, thereby preserving privacy.
 
 Here's an example of a camera image:
+
+
+![](images/image_58_2023-06-30_11-33-07.png)
 
 
 
