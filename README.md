@@ -7,7 +7,7 @@ The project involves the classification of images captured by traffic cameras op
 
 Two distinct classifications were performed. The first classification aimed to identify whether there is heavy traffic at a particular location, while the second classification focused on detecting instances of flooding on the roads. Recife is known for having one of the worst traffic congestions in the world (source: [Moovit Insights Public Transit Index](https://moovitapp.com/insights/en/Moovit_Insights_Public_Transit_Index-countries)). Additionally, the city frequently experiences road flooding during rainy days due to its low-lying geography and inadequate infrastructure.
 
-The project was developed in Python using the Google Colab environment.
+The first phase of the project was built in the Google Colab environment, with the purpose of utilizing simplified integration with Google Drive and the available GPU. In the next stage, the plan is to build an application using Streamlit (with the model already saved and preloaded).
 
 The CTTU website (https://cttu.recife.pe.gov.br/cameras-da-cttu) provides access to 104 traffic cameras spread across the city. Clicking on a camera displays a real-time image of the corresponding location (a single photo, not a video).
 
