@@ -15,12 +15,23 @@ The CTTU website (https://cttu.recife.pe.gov.br/cameras-da-cttu) provides access
 
 In the initial phase, the Selenium package was used to retrieve camera images. The images were stored on Google Drive. Due to the website's significant response time (approximately 8 seconds to load an image), there is no risk of generating a high number of requests. It is important to note that the image quality is not high (less than 100 KB), making it impossible to identify vehicle license plates or pedestrians, thereby preserving privacy.
 
-Here's an example of a camera image:
+Here are examples of a camera image for each class:
 
+#### - Flooding:
 
-![](images/image_58_2023-06-30_11-33-07.png)
+![](images/image_flooding.png)
 
+#### - No flooding:
 
+![](images/image_no_flooding.jpg)
+
+#### - Traffic:
+
+![](images/image_traffic.jpg)
+
+#### - Low traffic:
+
+![](images/image_low_traffic.jpg)
 
 The script was executed at different times, including periods of heavy and light traffic. It was also run during rainy days to capture images of flooding. Subsequently, a manual screening of the images was performed, categorizing them into the relevant classes of interest.
 
@@ -49,6 +60,17 @@ The transfer learning approach with the pretrained TensorFlow models (Mobilenet_
      [ 51 178]]
     ```
   Approximately 77% accuracy in the traffic class (class with fewer samples) with only 10 epochs.
+
+## Results
+
+The initial results are promising and demonstrate how it's possible to use transfer learning in open solutions. With a limited amount of data and reduced training time, it was possible to achieve an accuracy close to 90% in cases of flooded images.
+
+This approach has the potential to produce support tools for cities at a very low cost and with a short development time, yielding excellent results. The City Hall of Recife has access to real-time camera images, enabling other solutions such as accident detection, traffic violations, etc.
+
+In the specific case of Recife city, rainfall sensors are being installed to try to anticipate possible flooding (link: https://www2.recife.pe.gov.br/noticias/18/07/2023/prefeitura-conclui-instalacao-dos-primeiros-pluviometros-e-sensores-de).
+
+The proposed tool could be complementary, offering a different approach to the problem. Perhaps with a more robust approach, such as developing a specific model for each camera.
+
 
 ## Next steps
 Please note that further steps are required to address the class imbalance and improve the overall performance of the classification models.
