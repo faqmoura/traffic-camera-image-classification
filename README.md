@@ -48,23 +48,23 @@ The transfer learning approach with the pretrained TensorFlow models (Mobilenet_
   - Confusion Matrix:
     ```
     [[ 70  11]
-     [ 21 298]]
+     [ 20 299]]
     ```
   Approximately 86,4% accuracy in the flooding class.
 
 ### Traffic Classification
 - 10 epochs:
-  - Accuracy: 0.9219409282700421
+  - Accuracy: 0.8892405063291139
   - Confusion Matrix:
     ```
-    [[696  23]
-     [ 51 178]]
+    [[668  51]
+     [ 54 175]]
     ```
-  Approximately 77% accuracy in the traffic class (class with fewer samples) with only 10 epochs.
+  Approximately 76,4% accuracy in the traffic class (class with fewer samples) with only 10 epochs.
 
 ## Results
 
-The initial results are promising and demonstrate how it's possible to use transfer learning in open solutions. With a limited amount of data and reduced training time (about 1 minute), it was possible to achieve an accuracy close to 90% in cases of flooded images.
+The initial results are promising and demonstrate how it's possible to use transfer learning in open solutions. With a limited amount of data and reduced training time (about 5 minutes in the flooding problem and 33 mintes in the traffic classification), it was possible to achieve an accuracy close to 90% in cases of flooded images and 80% in the traffic classification.
 
 This approach has the potential to produce support tools for cities at a very low cost and with a short development time, yielding excellent results. The City Hall of Recife has access to real-time camera images, enabling other solutions such as accident detection, traffic violations, etc.
 
