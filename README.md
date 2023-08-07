@@ -1,5 +1,6 @@
 # Traffic Classification and Flooding Detection from Traffic Cameras
-The project involves the classification of images captured by traffic cameras operated by the Urban Traffic and Transportation Company (CTTU) in Recife, Pernambuco, Brazil.  The aim is to identify heavy traffic conditions and instances of road flooding. This project utilizes transfer learning with pretrained TensorFlow models, specifically Mobilenet_v2 and Inception_v3.
+The project involves the classification of images captured by traffic cameras operated by the Urban Traffic and Transportation Company (CTTU) in Recife, Pernambuco, Brazil.  The aim is to identify heavy traffic conditions and instances of road flooding. This project utilizes transfer learning with pretrained TensorFlow models, specifically Mobilenet_v2 and Inception_v3 (the results were similar). The following TensorFlow notebook was used as a base: https://www.tensorflow.org/tutorials/images/transfer_learning_with_hub?hl=en
+
 
 *** This project is under construction ***
 
@@ -11,7 +12,7 @@ The first phase of the project was built in the Google Colab environment, with t
 
 The CTTU website (https://cttu.recife.pe.gov.br/cameras-da-cttu) provides access to 104 traffic cameras spread across the city. Clicking on a camera displays a real-time image of the corresponding location (a single photo, not a video).
 
-### Image retrieving
+## Image retrieving
 
 In the initial phase, the Selenium package was used to retrieve camera images. The images were stored on Google Drive. Due to the website's significant response time (approximately 8 seconds to load an image), there is no risk of generating a high number of requests. It is important to note that the image quality is not high (less than 100 KB), making it impossible to identify vehicle license plates or pedestrians, thereby preserving privacy.
 
@@ -46,10 +47,10 @@ The transfer learning approach with the pretrained TensorFlow models (Mobilenet_
   - Accuracy: 0.9225
   - Confusion Matrix:
     ```
-    [[ 71  10]
+    [[ 70  11]
      [ 21 298]]
     ```
-  Approximately 87% accuracy in the flooding class.
+  Approximately 86,4% accuracy in the flooding class.
 
 ### Traffic Classification
 - 10 epochs:
@@ -63,7 +64,7 @@ The transfer learning approach with the pretrained TensorFlow models (Mobilenet_
 
 ## Results
 
-The initial results are promising and demonstrate how it's possible to use transfer learning in open solutions. With a limited amount of data and reduced training time, it was possible to achieve an accuracy close to 90% in cases of flooded images.
+The initial results are promising and demonstrate how it's possible to use transfer learning in open solutions. With a limited amount of data and reduced training time (about 1 minute), it was possible to achieve an accuracy close to 90% in cases of flooded images.
 
 This approach has the potential to produce support tools for cities at a very low cost and with a short development time, yielding excellent results. The City Hall of Recife has access to real-time camera images, enabling other solutions such as accident detection, traffic violations, etc.
 
